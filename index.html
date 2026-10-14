@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberSafe Toolkit: a local-first beginner cybersecurity learning project.">
+  <title>CyberSafe Toolkit</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CyberSafe Toolkit home"><span class="brand-icon">◆</span> CyberSafe <span class="muted">Toolkit</span></a>
+    <span class="tag">BEGINNER SECURITY LAB</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">LEARN • CHECK • STAY SAFE</p>
+        <h1>Build safer <span>digital habits.</span></h1>
+        <p class="hero-copy">A small, privacy-friendly cybersecurity toolkit. Explore password hygiene, spot suspicious URL clues, and test your security knowledge.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="shield">✓</div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="notice" role="note">
+      <strong>Privacy first:</strong> Everything runs in your browser. Passwords are not saved or sent anywhere. URL checks are heuristic clues, not a verdict that a site is safe or malicious.
+    </section>
+
+    <section class="stats" aria-label="Toolkit overview">
+      <article class="stat"><span class="stat-icon">01</span><div><strong>Password check</strong><small>Strength guidance</small></div></article>
+      <article class="stat"><span class="stat-icon">02</span><div><strong>URL clues</strong><small>Phishing awareness</small></div></article>
+      <article class="stat"><span class="stat-icon">03</span><div><strong>Mini quiz</strong><small>Learn by doing</small></div></article>
+    </section>
+
+    <section class="tool-grid">
+      <article class="panel" id="password-panel">
+        <div class="panel-heading"><div><p class="eyebrow">TOOL 01</p><h2>Password hygiene</h2></div><span class="panel-symbol">⌁</span></div>
+        <p class="subcopy">Try a sample password to get local feedback. Never enter a password you actually use.</p>
+        <label for="passwordInput">Sample password</label>
+        <div class="input-row">
+          <input id="passwordInput" type="password" autocomplete="off" spellcheck="false" placeholder="Type a made-up password">
+          <button class="button button-quiet" id="togglePassword" type="button">Show</button>
+        </div>
+        <div class="meter" aria-label="Password strength"><span id="strengthBar"></span></div>
+        <div class="strength-line"><strong id="strengthLabel">Not checked</strong><span id="lengthLabel">0 characters</span></div>
+        <ul id="passwordFeedback" class="feedback"><li>Enter a made-up password to see suggestions.</li></ul>
+        <p class="tiny">Tip: use a long, unique passphrase and a password manager. Length and uniqueness matter.</p>
+      </article>
+
+      <article class="panel" id="url-panel">
+        <div class="panel-heading"><div><p class="eyebrow">TOOL 02</p><h2>Suspicious URL clues</h2></div><span class="panel-symbol">⌕</span></div>
+        <p class="subcopy">Check the text of a URL without opening it. This tool does not visit the website.</p>
+        <label for="urlInput">URL to inspect</label>
+        <input id="urlInput" type="text" inputmode="url" placeholder="https://example.com/login">
+        <button class="button" id="checkUrl" type="button">Analyze URL clues</button>
+        <div id="urlResult" class="result-box" aria-live="polite">
+          <strong>Ready to inspect</strong><p>Enter a URL above. We will explain any warning signs found.</p>
+        </div>
+        <p class="tiny">No automated URL checker can guarantee safety. When in doubt, navigate to a service using its official app or a saved bookmark.</p>
+      </article>
+    </section>
+
+    <section class="panel quiz-panel" id="quiz-panel">
+      <div class="panel-heading"><div><p class="eyebrow">TOOL 03</p><h2>Security mini quiz</h2></div><span class="score-pill" id="scorePill">Score: 0/0</span></div>
+      <p class="subcopy">Choose the safest answer. You can retry the quiz whenever you want.</p>
+      <div id="quizArea"></div>
+      <div class="quiz-footer"><p id="quizFeedback" aria-live="polite">Question 1 of 4</p><button class="button" id="nextQuestion" type="button">Check answer</button></div>
+    </section>
+
+    <section class="bottom-callout">
+      <div><p class="eyebrow">NEXT STEPS</p><h2>Small project. Real skills.</h2><p>Explore the JavaScript, practice explaining each function, then add tests and improve the interface.</p></div>
+      <a class="text-link" href="README.md">Read project guide ↗</a>
+    </section>
+
+    <footer><span>CyberSafe Toolkit</span><span>Educational demo • Use responsibly</span></footer>
+  </main>
+</body>
+</html>
